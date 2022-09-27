@@ -1,0 +1,75 @@
+
+########## use apt install to get Nginx installed######
+
+sudo apt update
+sudo apt install nginx
+
+check which UFW profiles are available, run:
+
+sudo ufw app list
+
+sudo ufw app list
+
+sudo ufw allow 'Nginx HTTP'
+sudo ufw enable
+
+
+sudo ufw status
+
+ip addr show eth0 | grep inet | awk '{ print $2; }' | sed 's/\/.*$//'
+
+curl -4 icanhazip.com
+
+
+composer install -
+
+sudo apt update
+sudo apt install php-cli unzip
+cd ~
+curl -sS https://getcomposer.org/installer -o /tmp/composer-setup.php
+
+HASH=`curl -sS https://composer.github.io/installer.sig`
+
+echo $HASH
+
+php -r "if (hash_file('SHA384', '/tmp/composer-setup.php') === '$HASH') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+
+sudo php /tmp/composer-setup.php --install-dir=/usr/local/bin --filename=composer
+
+
+
+
+#########install php 
+sudo apt update
+sudo apt install lsb-release ca-certificates apt-transport-https software-properties-common -y
+sudo add-apt-repository ppa:ondrej/php
+
+sudo apt update
+sudo apt install php8.1
+sudo apt install php8.1-{bcmath,xml,fpm,mysql,zip,intl,ldap,gd,cli,bz2,curl,mbstring,pgsql,opcache,soap,cgi}
+
+
+##########Mysql Install#############
+
+
+sudo apt install mysql-server
+sudo mysql_secure_installation
+##no then password
+
+CREATE USER 'alif'@'localhost' IDENTIFIED BY '12345678';
+
+GRANT ALL PRIVILEGES ON *.* TO 'alif'@'localhost' WITH GRANT OPTION;
+
+git token generate - 
+ssh-keygen
+ cat /home/ubuntu/.ssh/id_rsa.pub
+ 
+ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC7rbhLEw0hUXsUBK5TqFXDAPDoie+nRFlNWGeZmiePDxle7RCvueIvO5MsjAMDPh3MP6JNdN12c1xAhBj6kA0gbzZo3boZHzNLif4VB3wVbcfVQXpaZMq/4frU4AOQ+Kfkq5QAZ8/RNOFCrxxMyL9/4sjFd5/Rr/3Xf/0jroXYQwNwilaQG+Gn9dwExNoRbKyC9teAHNPuY0rK5VG84u4kvSwg+gfHD8tvem7/FHcZ6aMhRPYGqbDyp+cm6mTNplV7UL4xB8zXmWHHQwKtXNW4eJSzljBUy2j1GR2WzZt/Qb4+vjxU1uEB2y4wZANQTDWyynpKU9Hfso2M+ElF/xq6L9oe0ng4VK5LJIpLrbN5uGmJ5JHtVNN+DBapF+nM8036pcwo1lITUPXpAnCmP6g7XpVGs8PcfK2tDj0+ARabtSOV8yiWXppVERyZZvzwwQP82yGJ+SE2J9PNcgWN0kiTCM4300YYqv4E0rnEXUKVY7ihblty61sTVIuPvmiSil0= ubuntu@ip-10-0-0-128
+
+
+sudo chown -R www-data.www-data storage
+
+sudo chown -R www-data.www-data bootstrap
+
+sudo php artisan optimize
+

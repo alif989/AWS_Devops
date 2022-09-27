@@ -1,0 +1,4 @@
+ip-10-0-0-92.ap-southeast-1.compute.internal
+noobyia-dev-db.caqveoknsqxe.eu-central-1.rds.amazonaws.com
+
+UPDATE mysql.user SET Password = PASSWORD('123456') WHERE User = 'root';

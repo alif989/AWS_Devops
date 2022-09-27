@@ -1,0 +1,364 @@
+php artisan migrate:refresh --path=/database/migrations/2022_02_17_131937_add_comment_to_iap_activity_tasks_table.php
+
+
+
+php artisan make:migration add_comment_to_iap_activity_tasks_table --table=iap_activity_tasks
+
+php artisan make:migration add_remove_column_to_form_welltest_data_table --table=form_welltest_data
+
+php artisan migrate:refresh --path=/database/migrations/2022_02_28_125919_remove_column_to_form_welltest_data_table.php
+
+####01-03-2022##########
+######Migration#########
+
+php artisan make:migration create_form_welltest_gas_type_table --create=form_welltest_gas_type
+php artisan make:migration create_form_welltest_source_table --create=form_welltest_source
+php artisan make:migration create_form_welltest_type_table --create=form_welltest_type
+php artisan make:migration alter_pipeline_form_welltest_data_table --table=form_welltest_data
+
+php artisan make:migration add_pressuretap_to_form_welltest_data_table --table=form_welltest_data
+
+php artisan make:migration add_Orifice_cal_field_to_form_welltest_data_table --table=form_welltest_data
+
+######Migrate##########
+php artisan migrate --path=/database/migrations/2022_03_01_110745_create_form_welltest_gas_type_table.php
+php artisan migrate --path=/database/migrations/2022_03_01_112512_create_form_welltest_source_table.php
+php artisan migrate --path=/database/migrations/2022_03_01_113406_create_form_welltest_type_table.php
+php artisan migrate --path=/database/migrations/2022_03_01_153900_add_remove_column_to_form_welltest_data_table.php\
+
+
+php artisan migrate --path=/database/migrations/2022_04_03_064212_alter_to_form_strings_data_table.php
+php artisan migrate --path=/database/migrations/2022_04_03_110131_alter_to_form_welltest_data_table.php
+
+
+######make Seeder#####
+php artisan make:seeder FromWelltestGasTypeTable
+php artisan make:seeder FromWelltestSourceTable
+php artisan make:seeder FromWelltestTypeTable
+
+########Run Seeder##############
+
+php artisan db:seed --class=FromWelltestGasTypeTable
+php artisan db:seed --class=FromWelltestSourceTable
+php artisan db:seed --class=FromWelltestTypeTable
+
+php artisan db:seed --class=FromRefineryTankDataStoredProductSeeder
+
+
+
+####03-04-2022######
+php artisan migrate --path=/database/migrations/2022_03_02_065853_alter_to_form_welltest_data_table.php
+php artisan migrate --path=/database/migrations/2022_04_04_073219_alter_to_form_equipment_data_table.php
+
+php artisan make:migration  add_field_to_form_welltest_data_table --table=form_welltest_data
+
+php artisan make:migration  remane_column_to_form_welltest_data_table --table=form_welltest_data
+
+php artisan make:migration alter_to_form_equipment_data_table --table=form_equipment_data
+php artisan make:migration add_gas_to__form_equipment_data_table --table=form_equipment_data
+php artisan make:migration alter_status_to_form_equipment_data_table --table=form_equipment_data
+
+php artisan migrate  --path=/database/migrations/2022_04_05_081143_add_gas_to__form_equipment_data_table.php
+php artisan migrate --path=/database/migrations/2022_04_05_090355_alter_status_to_form_equipment_data_table.php
+
+php artisan migrate --path=/database/migrations/2022_04_06_055737_add_equiptype_to_form_equipment_data_table.php
+php artisan migrate --path=/database/migrations/2022_04_06_064239_alter_sepator_to_form_equipment_data_table.php
+php artisan migrate --path=/database/migrations/2022_04_06_064429_add_sepator_to_form_equipment_data_table.php
+
+
+php artisan make:migration add_equiptype_to_form_equipment_data_table --table=form_equipment_data
+
+php artisan make:migration alter_sepator_to_form_equipment_data_table --table=form_equipment_data
+
+php artisan make:migration ad_status_to_form_diesel_data_table --table=form_diesel_data
+php artisan make:migration create_form_tank_data
+
+php artisan migrate --path=/database/migrations/2022_04_11_084410_create_form_tank_data.php
+
+php artisan make:migration rename_form_tank_data_to_form_flowstation_tank_data_table
+
+php artisan migrate --path=/database/migrations/2022_04_12_054503_rename_form_tank_data_to_form_flowstation_tank_data_table.php
+
+
+
+php artisan make:migration create_form_refinery_tank_data_stored_product
+php artisan migrate --path=/database/migrations/2022_04_13_073340_create_form_refinery_tank_data_stored_product.php
+
+php artisan make:seeder FromRefineryTankDataStoredProduct
+
+php artisan db:seed --class=FromRefineryTankDataStoredProductSeeder.php
+
+php artisan make:migration create_form_flowstation_data
+
+php artisan migrate --path=/database/migrations/2022_04_13_084049_create_form_refinery_tank_data.php
+php artisan migrate --path=/database/migrations/2022_04_14_081036_create_form_flowstation_data.php
+
+php artisan migrate --path=/database/migrations/2022_04_17_111924_create_form_equipment_flowstation_data.php
+
+php artisan migrate --path=/database/migrations/2022_04_17_115451_create_form_equipment_gasplant_data.php
+
+php artisan migrate --path=/database/migrations/2022_04_18_100454_create_form_mer_data.php
+
+
+
+2022_04_13_084049_create_form_refinery_tank_data
+
+
+php artisan make:migration create_form_equipment_flowstation_data
+
+php artisan make:migration create_form_equipment_gasplant_data
+
+php artisan make:migration create_form_mer_data
+
+php artisan migrate --path=/database/migrations/2022_04_18_100454_create_form_mer_data.php
+
+
+php artisan make:migration create_form_refinery_data
+
+php artisan migrate --path=/database/migrations/2022_04_20_091008_create_form_refinery_data.php
+php artisan migrate --path=/database/migrations/2022_04_28_101425_add_field_to_form_lact_data_table.php
+
+php artisan make:migration add_field_to_form_lact_data_table --table=form_lact_data
+
+php artisan make:migration create_form_waste_data
+php artisan make:migration create_form_gasplant_data
+
+php artisan migrate --path=/database/migrations/2022_05_08_091741_create_form_waste_data.php
+php artisan migrate --path=/database/migrations/2022_05_08_135833_create_form_gasplant_data.php
+
+php artisan make:migration add_status_to_form_diesel_data_table --table=form_diesel_data
+php artisan migrate --path=/database/migrations/2022_05_15_101554_add_status_to_form_diesel_data_table.php
+
+
+php artisan make:migration alter_to_form_equipment_flowstation_data_table --table=form_equipment_flowstation_data
+php artisan migrate --path=/database/migrations/2022_05_15_105805_alter_to_form_equipment_flowstation_data_table.php
+
+
+php artisan make:migration alter_to_form_equipment_gasplant_data_table --table=form_equipment_gasplant_data
+php artisan migrate --path=/database/migrations/2022_05_15_141140_alter_to_form_equipment_gasplant_data_table.php
+
+php artisan make:migration alter_to_form_flowstation_data_table --table=form_flowstation_data
+php artisan migrate --path=/database/migrations/2022_05_15_143704_alter_to_form_flowstation_data_table.php
+
+php artisan make:migration alter_add_to_form_strings_data_table --table=form_strings_data
+php artisan migrate --path=/database/migrations/2022_05_15_144808_alter_add_to_form_strings_data_table.php
+
+
+php artisan make:migration alter_to_form_lact_data_table --table=form_lact_data
+php artisan migrate --path=/database/migrations/2022_05_17_084954_alter_to_form_lact_data_table.php
+
+
+php artisan make:migration add_reservoir_to_form_welltest_data_table --table=form_welltest_data
+
+php artisan make:migration create_form_mer_data
+
+php artisan make:migration alter_add_column_to_form_mer_data_table --table=form_mer_data
+php artisan migrate --path=/database/migrations/2022_05_22_135405_alter_add_column_to_form_mer_data_table.php
+php artisan migrate --path=/database/migrations/2022_05_23_111350_alter_drop_column_to_form_strings_data_table.php
+
+
+php artisan make:migration create_form_strings_data
+php artisan make:migration alter_drop_column_to_form_strings_data_table --table=form_strings_data
+
+php artisan make:migration alter_add_column_to_form_flowstation_data_table --table=form_flowstation_data
+php artisan migrate --path=/database/migrations/2022_05_24_063802_alter_add_column_to_form_flowstation_data_table.php
+
+php artisan make:migration alter_rename_column_to_form_lact_data_table --table=form_lact_data
+php artisan migrate --path=/database/migrations/2022_05_24_123534_alter_rename_column_to_form_lact_data_table.php
+
+
+php artisan make:migration create_form_terminal_data
+php artisan migrate --path=/database/migrations/2022_05_29_104307_create_form_terminal_data.php
+
+php artisan make:migration create_form_change_log
+
+php artisan migrate --path=/database/migrations/2022_05_30_140308_create_form_change_log.php
+
+
+php artisan make:migration add_foreign_key_to_form_waste_data_table --table=form_waste_data
+php artisan migrate --path=/database/migrations/2022_06_05_103420_add_foreign_key_to_form_waste_data_table.php
+
+
+php artisan make:migration add_foreign_key_to_form_gasplant_data_table --table=form_gasplant_data
+php artisan migrate --path=/database/migrations/2022_06_05_105327_add_foreign_key_to_form_gasplant_data_table.php
+
+php artisan make:migration add_foreign_key_to_form_flowstation_tank_data_table --table=form_flowstation_tank_data
+php artisan migrate --path=/database/migrations/2022_06_05_105724_add_foreign_key_to_form_flowstation_tank_data_table.php
+
+php artisan make:migration add_foreign_key_to_form_flowstation_data_table --table=form_flowstation_data
+php artisan migrate --path=/database/migrations/2022_06_05_110226_add_foreign_key_to_form_flowstation_data_table.php
+
+php artisan make:migration add_foreign_key_to_form_refinery_data_table --table=form_refinery_data
+php artisan migrate --path=/database/migrations/2022_06_05_113259_add_foreign_key_to_form_refinery_data_table.php
+
+php artisan make:migration  drop_column_to_form_flowstation_data_table --table=form_flowstation_data
+php artisan migrate --path=/database/migrations/2022_06_05_134034_drop_column_to_form_flowstation_data_table.php
+
+php artisan make:migration  add_column_to_form_strings_data_table --table=form_strings_data
+php artisan migrate --path=/database/migrations/2022_06_05_141219_add_column_to_form_strings_data_table.php
+
+php artisan migrate --path=/database/migrations/2022_06_07_101333_alter_add_to_form_welltest_data_table.php
+
+
+
+php artisan make:migration alter_to_form_mer_data_table --table=form_mer_data
+php artisan migrate --path=/database/migrations/2022_06_07_070154_alter_to_form_mer_data_table.php
+
+
+php artisan make:migration alter_add_to_form_welltest_data_table --table=form_welltest_data
+
+php artisan migrate --path=/database/migrations/2022_06_07_101333_alter_add_to_form_welltest_data_table.php
+
+php artisan make:migration alter_lenght_add_to_form_welltest_data_table --table=form_welltest_data
+php artisan migrate --path=/database/migrations/2022_06_07_124602_alter_lenght_add_to_form_welltest_data_table.php
+
+php artisan migrate --path=/database/migrations/2022_06_20_064325_alert_to_form_flowstation_data_table.php
+
+
+php artisan make:migration  alert_to_form_flowstation_data_table --table=form_flowstation_data
+
+php artisan make:migration  add_column_to_form_sample_reports_table --table=form_sample_reports
+php artisan migrate --path=/database/migrations/2022_06_23_102405_add_column_to_form_sample_reports_table.php
+
+
+
+php artisan make:migration create_entity_attribute
+php artisan migrate --path=/database/migrations/2022_06_23_115324_create_entity_attribute.php
+
+
+php artisan make:migration create_entity_attribute_types
+php artisan migrate --path=/database/migrations/2022_06_23_120340_create_entity_attribute_types.php
+
+
+php artisan make:migration create_entity_attribute_statuses
+php artisan migrate --path=/database/migrations/2022_06_23_120736_create_entity_attribute_statuses.php
+php artisan migrate --path=/database/migrations/2022_06_23_123915_rename_to_form_flowstation_data_table.php
+
+php artisan make:migration  rename_to_form_flowstation_data_table --table=form_flowstation_data
+php artisan migrate --path=/database/migrations/2022_06_23_123915_rename_to_form_flowstation_data_table.php
+
+php artisan make:migration  change_column_type_to_form_flowstation_data_table --table=form_flowstation_data
+
+php artisan make:migration  change_column_type_to_form_welltest_data_data_table --table=form_welltest_data
+
+php artisan make:migration create_emissions_electricity_efs
+php artisan make:migration create_emissions_signals
+php artisan make:migration create_emissions_scope2
+
+
+php artisan make:seeder UserSeeder
+
+######make Seeder#####
+php artisan make:seeder EmissionsElectricity_efsTable
+php artisan make:seeder EmissionsSignalsTable
+php artisan make:seeder EmissionsFactorLibraryTable
+
+########Run Seeder##############
+
+php artisan db:seed --class=EmissionsElectricity_efsTable
+php artisan db:seed --class=EmissionsSignalsTable
+
+php artisan make:migration  alert_add_column_to_emissions_scope2_table --table=emissions_scope2
+
+
+php artisan make:migration create_emissions_fuel_consumption
+
+php artisan make:migration create_emissions_ghg_gwp
+php artisan make:migration create_emissions_fugitive_efs
+
+php artisan make:migration create_emissions_densities
+
+php artisan make:migration create_emissions_stationary_comb
+
+php artisan make:migration create_emissions_mobile_comb
+php artisan make:migration create_emissions_heating_values
+php artisan make:migration create_emissions_flaring_comb_ef
+php artisan make:migration create_emissions_business_travel_ef
+
+php artisan db:seed --class=EmissionsFactorLibraryTable 
+
+
+php artisan make:migration  add_column_to_form_lab_sample_data_table --table=form_lab_sample_data
+
+php artisan make:migration create_emissions_settings
+
+
+php artisan make:migration create_emissions_calc
+
+
+php artisan make:migration  alert_column_type_to_form_gasplant_data_table --table=form_gasplant_data
+
+php artisan make:migration  alert_column_type_to_calc_ps_signal_props_table --table=calc_ps_signal_props
+
+php artisan make:migration  alert_column_type_to_sim_runs_table --table=sim_runs
+
+php artisan make:migration  alert_column_type_to_form_meter_factors_table --table=form_meter_factors
+
+
+
+php artisan make:migration  alert_column_type_to_emissions_calc_table --table=emissions_calc
+
+
+php artisan make:migration drop_emissions_scope2
+php artisan make:migration drop_emissions_signals
+
+php artisan make:migration create_form_purchased_electricity
+
+php artisan db:seed --class=EmissionsFactorLibraryTable 
+php artisan db:seed --class=EmissionPermissionSeeder 
+php artisan db:seed --class=EmissionsElectricity_efsTable
+
+php artisan make:seeder EmissionPermissionSeeder
+
+php artisan db:seed --class=EmissionsFactorLibraryTable 
+
+php artisan make:migration  add_sand_cut_to_form_strings_data_table --table=form_strings_data
+
+php artisan make:migration drop_form_purchased_electricity
+
+php artisan make:migration  add_column_to_emissions_business_travel_ef_table --table=emissions_business_travel_ef
+
+/VIEWS 
+
+php artisan make:migration  create_v_entities_view
+php artisan make:migration  create_v_hierarchies_view
+php artisan make:migration  alter_actual_deferment_asset_view
+
+php artisan make:migration  alter_actual_deferment_fields_view
+
+php artisan make:migration  alter_planned_deferment_view
+php artisan make:migration  alter_planned_deferment_cond_view
+php artisan make:migration  alter_planned_deferment_gas_view
+php artisan make:migration  alter_planned_deferment_oil_view
+
+php artisan make:migration  create_view_IPP_flowstation_deferment
+
+
+php artisan make:migration create_emissions_economic_factors
+
+php artisan make:migration  add_column_to_emissions_settings_table --table=emissions_settings
+
+php artisan make:migration  add_alter_column_to_emissions_calc_table --table=emissions_calc
+
+php artisan make:migration create_emissions_business_excel_upload
+
+php artisan make:migration  add_column_to_emissions_fuel_consumption_table --table=emissions_fuel_consumption
+
+
+php artisan make:migration create_emissions_drilling_fuel_consumption
+
+
+php artisan make:migration drop_column_to_emissions_fuel_consumption_table --table=emissions_fuel_consumption
+
+php artisan make:migration  add_column_gylcol_to_emissions_fuel_consumption_table --table=emissions_fuel_consumption
+
+php artisan make:migration create_emissions_glycol_dehydrator
+
+
+php artisan make:seeder EmissionsGlycolDehydrator
+
+php artisan db:seed --class=EmissionsGlycolDehydrator 
+glycol_factors_id
+php artisan make:migration  add_column_glycol_to_emissions_settings_table --table=emissions_settings
+
+php artisan make:migration  add_column_after_flaring_penalty_to_emissions_calc_table --table=emissions_calc
